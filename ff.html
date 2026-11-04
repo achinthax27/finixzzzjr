@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FINIXZZZ JR - Free Fire Gifts</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #087cff;
+    --dark: #061a35;
+    --light: #eaf4ff;
+    --white: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--dark);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* INTRO */
+
+#intro {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: radial-gradient(circle, #0759ad, #001126);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 0.8s;
+}
+
+.intro-fire {
+    font-size: 42px;
+    font-weight: 1000;
+    letter-spacing: 5px;
+    animation: fire 1s infinite alternate;
+}
+
+@keyframes fire {
+    from {
+        transform: scale(0.9);
+        text-shadow: 0 0 10px white;
+    }
+    to {
+        transform: scale(1.1);
+        text-shadow: 0 0 30px #00aaff;
+    }
+}
+
+.intro-logo {
+    font-size: 35px;
+    font-weight: 1000;
+    color: #fff;
+    margin-top: 25px;
+    letter-spacing: 3px;
+    animation: logo 1.5s infinite alternate;
+}
+
+@keyframes logo {
+    from { transform: scale(0.9); }
+    to { transform: scale(1.1); }
+}
+
+.loader {
+    width: 230px;
+    height: 9px;
+    background: #ffffff55;
+    border-radius: 20px;
+    margin-top: 35px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: white;
+    transition: width 0.1s;
+}
+
+#percent {
+    margin-top: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+/* HEADER */
+
+header {
+    background: white;
+    color: #0755a5;
+    text-align: center;
+    padding: 25px 10px;
+    border-bottom: 4px solid var(--blue);
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: 1000;
+}
+
+header p {
+    margin-top: 8px;
+}
+
+/* MAIN */
+
+.container {
+    max-width: 850px;
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+}
+
+.card {
+    background: white;
+    color: #102d50;
+    border-radius: 18px;
+    padding: 22px;
+    margin: 22px 0;
+    box-shadow: 0 5px 25px #0005;
+}
+
+.card h2 {
+    text-align: center;
+    color: #087cff;
+    margin-bottom: 18px;
+    font-size: 23px;
+}
+
+.card h3 {
+    color: #0868d7;
+    margin-bottom: 12px;
+}
+
+.card p {
+    line-height: 1.8;
+}
+
+/* STEPS */
+
+.step {
+    background: #edf6ff;
+    padding: 18px;
+    border-radius: 12px;
+    margin-top: 15px;
+    border-left: 5px solid #087cff;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #087cff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 12px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0056bd;
+    transform: translateY(-2px);
+}
+
+/* FORM */
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0 15px;
+    border: 1px solid #087cff;
+    border-radius: 10px;
+    background: #f0f7ff;
+    color: #102d50;
+    font-size: 15px;
+}
+
+input[type="file"] {
+    background: #eaf4ff;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #0755a5;
+    margin-top: 12px;
+}
+
+.preview {
+    font-size: 13px;
+    color: #087cff;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+/* SOCIAL */
+
+.social {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.social a {
+    text-align: center;
+    text-decoration: none;
+    padding: 17px 5px;
+    color: white;
+    background: #087cff;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+/* WARNING */
+
+.warning {
+    background: #e8f3ff;
+    color: #0755a5;
+    padding: 16px;
+    border-radius: 10px;
+    border-left: 5px solid #087cff;
+    margin-top: 18px;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+
+footer {
+    background: white;
+    color: #0755a5;
+    text-align: center;
+    padding: 30px 10px;
+    border-top: 4px solid #087cff;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+/* MOBILE */
+
+@media(max-width: 500px) {
+    .intro-fire {
+        font-size: 32px;
+    }
+
+    .intro-logo {
+        font-size: 26px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .card {
+        padding: 17px;
+    }
+
+    .social {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- OPENING ANIMATION -->
+
+<div id="intro">
+
+    <div class="intro-fire">FREE FIRE</div>
+
+    <div class="intro-logo">FINIXZZZ JR</div>
+
+    <div class="loader">
+        <div class="progress" id="progress"></div>
+    </div>
+
+    <div id="percent">0%</div>
+
+    <p style="margin-top:15px;">
+        LOADING...
+    </p>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>FINIXZZZ JR</h1>
+
+    <p>🎮 FREE FIRE GIFT GIVEAWAY 🎁</p>
+
+</header>
+
+
+<div class="container">
+
+
+<!-- HOW TO WIN -->
+
+<div class="card">
+
+    <h2>🎁 HOW TO WIN GIFT 🏆</h2>
+
+    <p style="text-align:center;">
+
+        ❤️ ඔයාලත් අපෙන් වටිනා Gift දිනාගන්න කැමතිද?
+
+        😍 එහෙනම් පහත පියවර අනුගමනය කරන්න.
+
+    </p>
+
+    <br>
+
+    <h3>🥇 Gift Win කරන ක්‍රම 02ක් තියෙනවා!</h3>
+
+
+    <div class="step">
+
+        <h3>1️⃣ WhatsApp Channel හරහා 📲</h3>
+
+        <p>
+            🔹 අපගේ WhatsApp Channel එකට Join වන්න.
+
+            <br>
+
+            🔹 අපි ලබාදෙන Team Codes වලට සහභාගී වන්න.
+
+            <br>
+
+            🔹 වටිනා Gifts දිනාගන්න අවස්ථාව ලබාගන්න!
+        </p>
+
+        <a class="btn"
+        href="https://whatsapp.com/channel/0029Vb8OLzMGehEMp21fwl1X"
+        target="_blank">
+
+            JOIN WHATSAPP CHANNEL
+
+        </a>
+
+    </div>
+
+
+    <div class="step">
+
+        <h3>2️⃣ TikTok LIVE හරහා 🔴</h3>
+
+        <p>
+            🔹 අපගේ TikTok LIVE එකට සහභාගී වන්න.
+
+            <br>
+
+            🔹 LIVE අතරතුර පැවැත්වෙන Gift Giveaways වලට සහභාගී වන්න.
+
+            <br>
+
+            🔹 Gifts දිනාගන්න!
+        </p>
+
+        <a class="btn"
+        href="https://www.tiktok.com/@finixzzzjr"
+        target="_blank">
+
+            VISIT TIKTOK
+
+        </a>
+
+    </div>
+
+
+    <div class="warning">
+
+        ⚠️ විශේෂ දැනුම්දීමක්!
+
+        <br>
+
+        ❤️ අපගේ Social Media Pages Follow / Subscribe කර අදාළ Proof Screenshots ලබාදෙන්න.
+
+        <br>
+
+        🔥 එහෙනම් තවත් පමා නොවී අපත් සමඟ එකතු වෙන්න!
+
+    </div>
+
+</div>
+
+
+<!-- GIFT FORM -->
+
+<div class="card" id="giftform">
+
+    <h2>🎁 SEND GIFT REQUEST</h2>
+
+    <p style="text-align:center;">
+        Enter Your Details & Submit Your Gift Request.
+    </p>
+
+    <form id="requestForm">
+
+        <label>👤 Your Name</label>
+
+        <input
+        type="text"
+        id="name"
+        placeholder="Enter Your Name"
+        required>
+
+
+        <label>🎮 Free Fire ID</label>
+
+        <input
+        type="text"
+        id="ffid"
+        placeholder="Enter Your Free Fire ID"
+        required>
+
+
+        <label>🎁 Gift Name</label>
+
+        <input
+        type="text"
+        id="gift"
+        placeholder="Enter Gift Name"
+        required>
+
+
+        <label>🎵 TikTok Follow Proof</label>
+
+        <input
+        type="file"
+        id="tiktok"
+        accept="image/*"
+        required>
+
+        <div class="preview" id="p1"></div>
+
+
+        <label>▶️ YouTube Subscribe Proof</label>
+
+        <input
+        type="file"
+        id="youtube"
+        accept="image/*"
+        required>
+
+        <div class="preview" id="p2"></div>
+
+
+        <label>📘 Facebook Follow Proof</label>
+
+        <input
+        type="file"
+        id="facebook"
+        accept="image/*"
+        required>
+
+        <div class="preview" id="p3"></div>
+
+
+        <label>📸 Instagram Follow Proof</label>
+
+        <input
+        type="file"
+        id="instagram"
+        accept="image/*"
+        required>
+
+        <div class="preview" id="p4"></div>
+
+
+        <button type="submit" class="btn">
+
+            🎁 SEND GIFT REQUEST
+
+        </button>
+
+    </form>
+
+    <div class="warning">
+
+        📌 Screenshots හතරම Upload කළ යුතුයි.
+
+        <br>
+
+        📲 WhatsApp Open වූ පසු Screenshots වෙනම Attach කර Send කරන්න.
+
+    </div>
+
+</div>
+
+
+<!-- SOCIAL MEDIA -->
+
+<div class="card">
+
+    <h2>🌐 FOLLOW FINIXZZZ JR</h2>
+
+    <div class="social">
+
+        <a href="https://www.tiktok.com/@finixzzzjr"
+        target="_blank">
+            🎵 TIKTOK
+        </a>
+
+        <a href="https://www.youtube.com/"
+        target="_blank">
+            ▶️ YOUTUBE
+        </a>
+
+        <a href="https://www.facebook.com/share/1DsJKQBvnz/"
+        target="_blank">
+            📘 FACEBOOK
+        </a>
+
+        <a href="https://www.instagram.com/finixzzzjr1/"
+        target="_blank">
+            📸 INSTAGRAM
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029Vb8OLzMGehEMp21fwl1X"
+        target="_blank">
+            💬 WHATSAPP CHANNEL
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- CONTACT -->
+
+<div class="card">
+
+    <h2>📞 CONTACT US</h2>
+
+    <p style="text-align:center;">
+
+        FINIXZZZ JR
+
+        <br>
+
+        WhatsApp: 072 080 7027
+
+    </p>
+
+    <a class="btn"
+    href="https://wa.me/94720807027"
+    target="_blank">
+
+        💬 CONTACT WHATSAPP
+
+    </a>
+
+</div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>FINIXZZZ JR ❤️</h2>
+
+    <p>🎁 GOOD LUCK EVERYONE 🏆</p>
+
+    <p>© 2026 FINIXZZZ JR</p>
+
+</footer>
+
+
+<script>
+
+/* LOADING ANIMATION */
+
+window.addEventListener("load", function() {
+
+    let number = 0;
+
+    const progress = document.getElementById("progress");
+    const percent = document.getElementById("percent");
+    const intro = document.getElementById("intro");
+
+    const timer = setInterval(function() {
+
+        number += 2;
+
+        if(number > 100) {
+            number = 100;
+        }
+
+        progress.style.width = number + "%";
+        percent.innerText = number + "%";
+
+        if(number >= 100) {
+
+            clearInterval(timer);
+
+            setTimeout(function() {
+
+                intro.style.opacity = "0";
+
+                setTimeout(function() {
+                    intro.style.display = "none";
+                }, 800);
+
+            }, 400);
+
+        }
+
+    }, 35);
+
+});
+
+
+/* IMAGE PREVIEW */
+
+const proofFields = [
+    ["tiktok", "p1"],
+    ["youtube", "p2"],
+    ["facebook", "p3"],
+    ["instagram", "p4"]
+];
+
+proofFields.forEach(function(field) {
+
+    const input = document.getElementById(field[0]);
+    const preview = document.getElementById(field[1]);
+
+    input.addEventListener("change", function() {
+
+        const file = this.files[0];
+
+        if(file) {
+
+            if(!file.type.startsWith("image/")) {
+
+                alert("Please select an image file.");
+
+                this.value = "";
+
+                preview.innerText = "";
+
+                return;
+            }
+
+            preview.innerText = "✓ Selected: " + file.name;
+
+        } else {
+
+            preview.innerText = "";
+
+        }
+
+    });
+
+});
+
+
+/* WHATSAPP REQUEST */
+
+document.getElementById("requestForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name =
+    document.getElementById("name").value.trim();
+
+    const ffid =
+    document.getElementById("ffid").value.trim();
+
+    const gift =
+    document.getElementById("gift").value.trim();
+
+    const tiktok =
+    document.getElementById("tiktok").files[0];
+
+    const youtube =
+    document.getElementById("youtube").files[0];
+
+    const facebook =
+    document.getElementById("facebook").files[0];
+
+    const instagram =
+    document.getElementById("instagram").files[0];
+
+
+    if(!name || !ffid || !gift) {
+
+        alert("Please fill all details.");
+
+        return;
+
+    }
+
+
+    if(!tiktok || !youtube || !facebook || !instagram) {
+
+        alert("Please upload all 4 proof screenshots.");
+
+        return;
+
+    }
+
+
+    const message =
+
+`🎁 FINIXZZZ JR - GIFT REQUEST
+
+👤 Name: ${name}
+
+🎮 Free Fire ID: ${ffid}
+
+🎁 Gift Name: ${gift}
+
+📸 SOCIAL MEDIA PROOFS
+
+🎵 TikTok: ${tiktok.name}
+
+▶️ YouTube: ${youtube.name}
+
+📘 Facebook: ${facebook.name}
+
+📸 Instagram: ${instagram.name}
+
+❤️ FINIXZZZ JR
+
+Please check my Gift Request.`;
+
+
+    const whatsappNumber = "94720807027";
+
+    const whatsappURL =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(message);
+
+
+    window.location.href = whatsappURL;
+
+});
+
+</script>
+
+</body>
+</html>
